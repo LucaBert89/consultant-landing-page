@@ -1,0 +1,23 @@
+.btn {
+    padding:15px 50px;
+    border-radius:10px;
+    width:220px;
+    font-family: map-get($fonts, font-text );
+    cursor:pointer;
+        &--grey {
+            background-color:map-get($background, bc-bluebell );
+        }
+        &:hover {
+            background-color:map-get($background, bc-white );
+            span {
+                color: map-get($colors, c-bluebell );
+            }
+        }
+        span {
+            color: map-get($colors, c-white );
+            font-size: map-get($f-size, regular );
+            display:block;
+            width:100%;
+        }
+}
+
