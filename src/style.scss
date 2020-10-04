@@ -2,8 +2,10 @@
 @import "./base/mixins";
 @import "./base/font";
 @import "./base/base";
+@import "./base/breakpoints";
 
 @import "./component/buttons";
 @import "./layout/header";
+@import "./layout/serviceProvided";
 
-@import "./themes/utils";
+@import "./themes/themes";

@@ -7,7 +7,8 @@ $colors: (
     c-palesky:#717784,
     c-emperor:#505050,
     c-bluebell:#9B9BCA,
-    c-stormgrey:#696A86
+    c-stormgrey:#696A86,
+    c-silverchalice: #9D9D9D
 );
 
 $background: (
@@ -27,8 +28,9 @@ $fonts: (
 );
 
 $f-size: (
-    small: 16px,
+    f-small: 16px,
     regular: 18px,
     logo: 22px,
+    small-title:26px,
     title: 56px
 );

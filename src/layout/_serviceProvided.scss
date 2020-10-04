@@ -1,0 +1,129 @@
+.small-title {
+    font-family:map-get($fonts, font-text );
+    font-size:map-get($f-size, small-title );
+    color:map-get($colors, c-blackGrey );
+}
+
+.service-section {
+    margin-top:100px;
+    text-align:center;
+    &__p {
+        width:70%;
+        display:inline-block;
+        span {
+            &:before {
+                content: '\A'; 
+                white-space: pre;
+            }
+        }
+    }
+}
+
+.services-list {
+    margin: 100px 0 150px 0;
+    display:flex;
+    justify-content: space-between;
+    &__item {
+        padding:20px 15px;
+        cursor:pointer;
+        border-radius:5px;
+        &:hover {
+            box-shadow: 0px 10px 0px 0px rgba(157,157,157,0.75);
+            border:1px solid map-get($colors, c-silverchalice );
+        }
+    }
+    &__icon {
+        img {
+            width: 50px;
+            height:50px;
+        }
+    }
+    &__heading {
+        margin:20px 0;
+        font-size:map-get($f-size, logo );
+        font-family:map-get($fonts, font-text );
+        color:map-get($colors, c-blackGrey );
+    }
+    &__p {
+        font-size:map-get($f-size, f-small );
+        line-height: 20px;
+    }
+}
+
+.people {
+    padding: 100px 0;
+    display:flex;
+    &__description {
+        width:55%;
+        text-align:left;
+    }
+    &__text {
+        margin-top:20px;
+        width:90%;
+    }
+    &__profiles {
+        width:60%;
+        position:relative;
+            .img-profile {
+                width:90px;
+            }
+        .support {
+            left:380px;
+            top:-20px;
+            div {
+                border:1px solid #000;
+                background-color: map-get($background, bc-black-grey);
+                color:#fff;
+                border-radius:100%;
+                padding:25px 20px;
+                span {
+                    display:block;
+                }    
+            }
+        }
+        .profile1 {
+            top:70px;
+            left:0;
+        }
+        .profile2 {
+            left:180px;
+        }
+        .profile3 {
+            left:250px;
+            top:-120px;
+        }
+        .profile4 {
+            left:280px;
+            bottom:-80px;
+        }
+        .profile5 {
+            left:500px;
+            top:-100px;
+        }
+        .profile6 {
+            left:480px;
+            bottom:-100px;
+        }
+        .curved-line {
+            top:-100px;
+            left:50px;
+            z-index:-1;
+        }
+        .curved-line2 {
+            top:-100px;
+            left:300px;
+            z-index:-1;
+            img {
+                width:80%;
+            }
+        }
+        .curved-line3 {
+            left:450px;
+            top:20px;
+            z-index:-1;
+        }
+    }
+    &__profile-picture {
+        position:absolute;
+    }
+}
