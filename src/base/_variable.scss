@@ -12,7 +12,8 @@ $colors: (
 );
 
 $background: (
-    bc-red: #F01F35,
+    bc-red-ribbon: #F01F35,
+    bc-red:#FF0202,
     bc-black-grey: #626780,
     bc-bluebell:#9B9BCA,
     bc-light-grey: #C8C8C8,
@@ -32,5 +33,6 @@ $f-size: (
     regular: 18px,
     logo: 22px,
     small-title:26px,
+    heading: 48px,
     title: 56px
 );
