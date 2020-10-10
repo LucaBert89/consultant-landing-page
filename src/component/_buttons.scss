@@ -21,3 +21,13 @@
         }
 }
 
+.faq__other-faq {
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    .btn {
+        padding:25px 100px;
+        width:500px;
+        border:1px solid map-get($background, bc-bluebell );
+    }
+}

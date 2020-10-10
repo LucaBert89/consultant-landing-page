@@ -132,10 +132,6 @@
 .video-demo {
     &__title {
         margin-bottom:50px;
-        span {
-            display:block;
-            width:50%;
-        }
     }
     &__video {
         background-image: url("./images/videopicture/video.svg");
@@ -194,5 +190,7 @@
 
 .heading {
     font-size:map-get($f-size, heading );
-    font-family:map-get($fonts, font-small-title )
+    font-family:map-get($fonts, font-small-title );
+    display:block;
+    width:50%;
 }
