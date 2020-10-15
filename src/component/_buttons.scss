@@ -4,6 +4,9 @@
     width:220px;
     font-family: map-get($fonts, font-text );
     cursor:pointer;
+        &--red {
+            background-color:map-get($background, bc-red-ribbon );
+        }
         &--grey {
             background-color:map-get($background, bc-bluebell );
         }
@@ -19,6 +22,7 @@
             display:block;
             width:100%;
         }
+       
 }
 
 .faq__other-faq {

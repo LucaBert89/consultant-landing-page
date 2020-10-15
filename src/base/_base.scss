@@ -11,6 +11,16 @@ body {
 }
 
 .siteCenter {
-    width:80%;
+    width:75%;
     margin:auto;
+}
+
+.txt-center {
+    text-align:center;
+}
+
+.paragraph {
+    font-family: map-get($fonts, font-text );
+    color: map-get($colors, c-stormgrey );
+    line-height: 27px;
 }
