@@ -24,3 +24,7 @@ body {
     color: map-get($colors, c-stormgrey );
     line-height: 27px;
 }
+
+.cursor {
+    cursor: pointer;
+}

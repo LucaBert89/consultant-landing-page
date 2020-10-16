@@ -5,8 +5,11 @@
 @import "./base/breakpoints";
 
 @import "./component/buttons";
+@import "./component/animations";
+
 @import "./layout/header";
 @import "./layout/serviceProvided";
 @import "./layout/faq";
-
+@import "./layout/feature";
+@import "./layout/joinUs";
 @import "./themes/themes";

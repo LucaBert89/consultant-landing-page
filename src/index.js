@@ -11,7 +11,7 @@ let slideBtn = document.querySelector(".best-feature__arrow");
 let slides = document.querySelectorAll(".best-feature__opinion");
 let currentSlide = 0;
 
-var control = false;
+
 
 for(let i=0; i< question.length; i++) {
     question[i].addEventListener("click", accordion);
@@ -22,7 +22,6 @@ for(let i=0; i< question.length; i++) {
 function accordion (event) {
     const answer = event.currentTarget.nextElementSibling;
     const arrowBtn = this.children[1];
-    console.log(); 
         if(answer.style.display == "") {
             answer.style.display = "flex";
             arrowBtn.style.transform = "rotate(90deg)"; 
@@ -33,6 +32,7 @@ function accordion (event) {
     }  
 
 function addQuestions() {
+    let control = false;
     let questionList = document.querySelectorAll(".faq__questions-list")[0];
     let questions = [
         "How do I apply for a traffic Permit?", 
@@ -91,10 +91,54 @@ function changeSlide() {
                 nextSlide++;
             }   
         } 
-        console.log(currentSlide, lastSlide, nextSlide);
+
 }
 
 function slider(current, next) {
     slides[current].classList.remove("active");
     slides[next].classList.add("active");
 }
+
+// validation form
+function validation() {
+    
+    const signBtn = document.querySelector(".signIn");
+    const inputName = document.querySelector(".join-us__name");
+    const password = document.querySelector(".join-us__password");
+    const errorName = document.querySelector(".join-us__error-name");
+    const errorPass = document.querySelector(".join-us__error-password");
+
+    signBtn.addEventListener("click", signIn);
+    
+    function signIn(event) {  
+        emptyValue();
+        let pass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/;
+
+        if(inputName.value == "" || inputName.value == null){
+            errorName.innerText ="You have to enter your name";
+            event.preventDefault();
+
+        } else if(password.value == "") {
+            errorPass.innerText = "You have to enter the password";
+            event.preventDefault();
+
+        } else if(!pass.test(password.value)){
+            errorPass.innerText = "You have to enter at least one uppercase and one number";
+            event.preventDefault();
+
+        } else if(password.value.length < 8 || password.value.length > 20) {
+            errorPass.innerText = "The password must be between 8 and 20 characters long";
+            event.preventDefault();
+            
+        } else {
+            return true;
+        }
+    }
+
+    function emptyValue() {
+        errorName.innerText ="";
+        errorPass.innerText = "";
+    }
+}
+
+validation();

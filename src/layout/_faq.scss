@@ -74,22 +74,6 @@
     }
 }
 
-@keyframes load-question {
-
-    0% {
-        opacity:0;
-        transform: translate(0px, -100%);
-      }
-    100% {
-        opacity: 1;
-        transform: translate(0px, 0%);
-      }
-}
-
-.appear-animation {
-    animation:load-question 1s;
-}
-
-.active {
+.clicked {
     transform: rotate(90deg);
 }

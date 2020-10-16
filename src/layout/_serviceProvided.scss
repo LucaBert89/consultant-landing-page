@@ -8,14 +8,15 @@
     margin-top:100px;
     margin-bottom:200px;
     text-align:center;
-    &__p {
-        width:70%;
-        display:inline-block;
-        span {
-            &:before {
-                content: '\A'; 
-                white-space: pre;
-            }
+}
+
+.section__p {
+    width:77%;
+    display:inline-block;
+    span {
+        &:before {
+            content: '\A'; 
+            white-space: pre;
         }
     }
 }

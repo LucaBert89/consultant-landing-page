@@ -1,0 +1,191 @@
+.feature {
+    margin-top:150px;
+    &__p {
+        width:70%;
+    }
+}
+
+.feature-boxes {
+    margin-top:145px;
+    display:flex;
+    justify-content: center;
+    &:before {
+        content:"";
+        background-image: url("./images/feature/circleBackground.svg");
+        background-repeat: no-repeat;;
+        width:1030px;
+        height:1030px;
+        position: absolute;
+        left:-50px;
+        z-index:-1;
+    }
+    &__box {
+        position:relative;
+        width:442px;
+        margin-right:69px;
+        background-color:#fff;
+        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);   
+        border-radius:10px;
+        display: inline-block;
+        &:last-child {
+            margin-right:0px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin:-1px;
+            border-radius: inherit; /* !importanté */
+            background: linear-gradient( #9D9D9D 0%, #D2D2D2 20%);
+        }
+    }
+    &__image {
+        margin:60px 0;
+    }
+    .small-title {
+        color:#000;
+    }
+    &__btn {
+        margin-top:79px;
+        @include flex-center-hor;
+        transform: translate(0%, 50%);
+    }
+}
+
+.best-feature {
+    position: relative;
+    display:flex;
+    height:800px;
+    &__image {
+        position:absolute;
+        background-image: url("./images/feature/bigGirl.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width:650px;
+        height:800px;
+        top:0;
+        left:-170px;
+    }
+    &__smallBubble {
+        position:relative;
+        left:450px;
+        top:170px;
+        &--down {
+            position:relative;
+            top:340px;
+            left:240px;
+        }
+    }
+    &__mediumBubble {
+        position:relative;
+        left:470px;
+        top:140px;
+        &--down {
+            position:relative;
+            top:380px;
+            left:300px;
+        }
+    }
+    &__bigBubble {
+        position:relative;
+        left:500px;
+        top:120px;
+        &--down {
+            position:relative;
+            top:460px;
+            left:360px;
+        }
+    }
+    .feature__container {
+        margin-left:350px;
+    }
+    .section__description {
+        margin-top:200px;
+        .section__p {
+            width:100%;
+        }
+    }
+    &__slides {
+        position:relative;
+    }
+    &__opinion {
+        display:none;
+        position:relative;
+        top:0;
+        margin:103px 0px 0px 200px;
+        padding:60px 91px 20px 37px;
+        width:75%;
+        box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+        font-family: map-get($fonts, font-text);
+        color:map-get($colors, c-silverchalice );
+    }
+    .active {
+        display:block;
+        animation: slideShow 1s;
+    }
+    &__review {
+        margin-bottom:10px;
+    }
+    &__author {
+        display:flex;
+        &::before {
+            background-size:100%;
+            content: "";
+            float:left;
+            background-repeat: no-repeat;
+            width:98px;
+            height:98px;
+        }
+    }
+    .profile1 {
+        &::before {
+            background-image: url("./images/feature/smallGirl.svg");
+        }
+    }
+    .profile2 {
+        &::before {
+            background-image: url("./images/feature/girlPic.jpg");
+        }
+    }
+    .profile3{
+        &::before {
+            background-image: url("./images/feature/menPic.jpg");
+        }
+    }
+    &__name {
+        color: map-get($colors, c-blackGrey );
+    }
+    &__container {
+        @include flex-center-hor;
+        flex-direction: column;
+        margin-left:48px;
+    }
+    &__rating {
+        font-size:map-get($f-size, f-small );
+    }
+    &__star {
+        display:inherit;
+        font-size:map-get($f-size, f-xsmall );
+        &::before {
+            content:"";
+            background-image:url("./images/feature/stars.svg");
+            background-repeat: no-repeat;
+            width:84px;
+            height:12px;
+        }
+    }
+    &__arrow {
+        background-image:url("./images/feature/slideArrow.svg");
+        background-repeat: no-repeat;
+        width:56px;
+        height:56px;
+        position:absolute;
+        right:0;
+        top:0;
+        bottom:0;
+        margin:auto;   
+        cursor:pointer; 
+    }
+    
+}

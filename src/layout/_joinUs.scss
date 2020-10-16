@@ -1,0 +1,59 @@
+.join-us {
+    margin-top: 100px;
+    &__title {
+        .heading {
+            width:55%;
+            line-height: 67px;
+        }
+       
+    }
+    &__container {  
+       @include flex-center-hor;
+       margin-top:100px;
+        form {
+            font-family: map-get($fonts, font-text );
+            color: map-get($colors, c-silverchalice );
+            padding-top:100px;
+            @include flex-center-vert;
+            flex-direction: column;
+            width:60%;
+            border-radius:10px;
+            background-color: #fff;
+            box-shadow: 0px 20px 40px rgba(149, 149, 201, 0.4);
+            label {
+                display:block;
+                font-size: map-get($f-size, f-small );
+                input {
+                    display:block;
+                    margin:10px 0px 30px 0px;
+                    border:2px solid map-get($colors, c-bluebell );
+                    border-radius:10px;
+                    box-shadow: 0px 20px 40px rgba(149, 149, 201, 0.2);
+                    padding:10px 80px 10px 20px;
+                    &::placeholder {
+                        color: map-get($colors, c-silverchalice );
+                    }
+                }
+            }
+            button {
+                border:none;
+                &:hover {
+                    border:1px solid map-get($colors, c-blackGrey );
+                }
+            }
+        }
+    }
+    &__input {
+        input[value=""] { 
+            color: map-get($colors, c-black-grey ); 
+        }
+    }
+    &__sign {
+        margin:30px 0 53px 0;
+        font-size: map-get($f-size, regular );
+    }
+    &__error {
+        margin:15px 0;
+        color:map-get($colors, c-red );
+    }
+}
