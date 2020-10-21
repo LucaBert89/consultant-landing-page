@@ -1,8 +1,9 @@
+@import "./base/breakpoints";
 @import "./base/variable";
 @import "./base/mixins";
 @import "./base/font";
 @import "./base/base";
-@import "./base/breakpoints";
+
 
 @import "./component/buttons";
 @import "./component/animations";
@@ -12,4 +13,6 @@
 @import "./layout/faq";
 @import "./layout/feature";
 @import "./layout/joinUs";
+@import "./layout/footer";
+
 @import "./themes/themes";

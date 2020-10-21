@@ -9,7 +9,8 @@ $colors: (
     c-bluebell:#9B9BCA,
     c-stormgrey:#696A86,
     c-silverchalice: #9D9D9D,
-    c-black-grey: #626780
+    c-black-grey: #626780,
+    c-mercury:#E5E5E5
 );
 
 $background: (
@@ -23,6 +24,7 @@ $background: (
 
 $fonts: (
     font-text: "poppinsregular",
+    font-copyright:"rubikegular",
     font-logo-image: "rammetto_oneregular",
     font-logo-text:"robotoregular",
     font-big-title: "dm_serif_displayregular",
@@ -31,10 +33,13 @@ $fonts: (
 
 $f-size: (
     f-xsmall:12px,
+    f-mobile-text: 14px,
     f-small: 16px,
     regular: 18px,
+    f-medium:20px,
     logo: 22px,
     small-title:26px,
+    mobile-title: 30px,
     heading: 48px,
     title: 56px
 );

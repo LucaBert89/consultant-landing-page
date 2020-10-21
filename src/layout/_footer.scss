@@ -1,0 +1,114 @@
+.footer-section {
+    margin-top: 100px;
+    @include breakpoint("small-dp") {
+        margin-top: 200px;
+    }
+    &__info {
+        display:block;
+        justify-content: space-around;
+        padding:80px 100px 0px 100px;
+        @include breakpoint("small-dp") {
+            display:flex;
+            padding:130px 100px 0px 100px;
+        }
+    }
+    &__list {
+        ul {
+            margin:50px 0px;
+            list-style: none;
+            font-family:map-get($fonts, font-text );
+            @include breakpoint("small-dp") {
+                margin:0px 0px;
+            }
+        }
+    }
+    &__element {
+        
+        font-size: map-get($f-size, f-small );
+        line-height: 24px;
+        color:map-get($colors, c-mercury );
+    }
+    &__list-title {
+        color:map-get($colors, c-white );
+        font-size: map-get($f-size, f-medium );
+        line-height: 30px;
+    }
+    &__legal {
+        margin-top:77px;
+        padding-bottom:20px;
+        display:block;
+        @include breakpoint("tablet") {
+            display:flex;
+            align-items: center;
+        }
+    }
+    &__copyright {
+        width:100%;
+        margin-bottom:20px; 
+        @include breakpoint("tablet") {
+            width:40%;
+        }
+        span {
+            font-size: map-get($f-size, f-small );
+            font-family:map-get($fonts, font-copyright);
+            color: map-get($colors, c-white );
+        }
+       
+    }
+    &__icons {
+        display:flex;
+        justify-content: flex-end;
+        @include breakpoint("tablet") {
+            width:60%;
+        }
+    }
+    &__face {
+        background-image: url("./images/footer/facebook.svg");
+    }
+    &__twitt {
+        background-image: url("./images/footer/twitter.svg");
+    }
+    &__insta {
+        background-image: url("./images/footer/instagram.svg");
+    }
+    .social-icon {
+        display:inline-block;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width:26px;
+        height:36px;
+        margin: 0 10px;
+        cursor:pointer;
+        @include breakpoint("tablet") {
+            width:36px;
+        }
+    }
+    &__logo {
+        margin-left:0px;
+        font-family:map-get($fonts, font-logo-text );
+        color: map-get($colors, c-white );
+        @include breakpoint("tablet") {
+            margin-left:123px;
+        }
+        .menu__image {
+            margin-right:0px;
+            padding:0px;
+            background-color:transparent;
+            display:inline-block;
+        }
+        .text {
+            display:inline-block;
+            font-size:map-get($f-size, f-small );
+            @include breakpoint("tablet") {
+                font-size:map-get($f-size, logo );
+            }
+        }
+    }
+}
+
+.halfCircle-background {
+    background-image: url("./images/footer/halfCircle.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center center;
+}

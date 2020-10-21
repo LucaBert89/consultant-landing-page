@@ -1,8 +1,12 @@
 * {
     box-sizing:border-box;
-    margin:0;
-    padding:0;
+    margin:0px;
+    padding:0px;
     font-size:map-get($f-size, regular );
+}
+
+html {
+    width:100%;
 }
 
 body {
@@ -23,6 +27,12 @@ body {
     font-family: map-get($fonts, font-text );
     color: map-get($colors, c-stormgrey );
     line-height: 27px;
+    span {
+        font-size: map-get($f-size, f-mobile-text );
+        @include breakpoint("small-dp") {
+            font-size: map-get($f-size, regular );
+        }
+    }
 }
 
 .cursor {

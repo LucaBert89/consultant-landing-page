@@ -33,7 +33,7 @@ function accordion (event) {
 
 function addQuestions() {
     let control = false;
-    let questionList = document.querySelectorAll(".faq__questions-list")[0];
+    let questionList = document.querySelectorAll(".faq__questions-list")[1];
     let questions = [
         "How do I apply for a traffic Permit?", 
         "When will I receive my permit?",

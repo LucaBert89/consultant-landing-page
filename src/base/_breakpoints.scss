@@ -16,7 +16,7 @@ $breakpoints: (
             @content;
         }
     }
-    @else if ($screen == small-dp) {
+    @else if ($screen == small-dp   ) {
         @media all and (min-width: map-get($breakpoints, $screen)){
             @content;
         }

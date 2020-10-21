@@ -1,9 +1,15 @@
 .join-us {
-    margin-top: 100px;
+    margin-top: 50px;
+    @include breakpoint("tablet") {
+        margin-top: 100px;
+    }
     &__title {
         .heading {
-            width:55%;
+            width:100%;
             line-height: 67px;
+            @include breakpoint("tablet") {
+                width:55%;
+            }
         }
        
     }
@@ -16,10 +22,15 @@
             padding-top:100px;
             @include flex-center-vert;
             flex-direction: column;
-            width:60%;
+            padding:30px 50px;
+            width:100%;
             border-radius:10px;
             background-color: #fff;
             box-shadow: 0px 20px 40px rgba(149, 149, 201, 0.4);
+            @include breakpoint("tablet") {
+                padding-top:100px;
+                width:60%;
+            }
             label {
                 display:block;
                 font-size: map-get($f-size, f-small );
@@ -29,7 +40,9 @@
                     border:2px solid map-get($colors, c-bluebell );
                     border-radius:10px;
                     box-shadow: 0px 20px 40px rgba(149, 149, 201, 0.2);
-                    padding:10px 80px 10px 20px;
+                    @include breakpoint("tablet") {
+                        padding:10px 80px 10px 20px;
+                    }
                     &::placeholder {
                         color: map-get($colors, c-silverchalice );
                     }
@@ -50,7 +63,12 @@
     }
     &__sign {
         margin:30px 0 53px 0;
-        font-size: map-get($f-size, regular );
+        span {
+            font-size: map-get($f-size, f-xsmall );
+            @include breakpoint("tablet") {
+                font-size: map-get($f-size, regular );
+            }
+        }
     }
     &__error {
         margin:15px 0;

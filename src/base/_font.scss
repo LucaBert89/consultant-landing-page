@@ -6,12 +6,20 @@
   font-style: normal;
 }
   
-  @font-face {
+@font-face {
     font-family: 'dm_serif_displayregular';
     src: url('./Webfonts/DM_Serif_Display/dmserifdisplay-regular-webfont.woff2') format('woff2'),
          url('./Webfonts/DM_Serif_Display/dmserifdisplay-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+  font-family: 'rubikregular';
+  src: url('./Webfonts/Rubik/rubik-regular-webfont.woff2') format('woff2'),
+       url('./Webfonts/Rubik/rubik-regular-webfont.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {

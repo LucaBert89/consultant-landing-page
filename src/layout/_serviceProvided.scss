@@ -1,30 +1,31 @@
 .small-title {
     font-family:map-get($fonts, font-text );
-    font-size:map-get($f-size, small-title );
+    font-size:map-get($f-size, f-medium );
     color:map-get($colors, c-blackGrey );
+    @include breakpoint("small-dp") {
+        font-size:map-get($f-size, small-title );
+    }
 }
 
 .service-section {
     margin-top:100px;
-    margin-bottom:200px;
+    margin-bottom:100px;
     text-align:center;
-}
-
-.section__p {
-    width:77%;
-    display:inline-block;
-    span {
-        &:before {
-            content: '\A'; 
-            white-space: pre;
-        }
+    @include breakpoint("tablet") {
+        margin-bottom:200px;
     }
 }
 
+
+
 .services-list {
-    margin: 100px 0 150px 0;
-    display:flex;
-    justify-content: space-between;
+    margin: 50px 0 50px 0;
+    display:block;
+    @include breakpoint("tablet") {
+        margin: 100px 0 150px 0;
+        display:flex;
+        justify-content: space-between;
+    }
     &__item {
         padding:20px 15px;
         cursor:pointer;
@@ -53,25 +54,40 @@
 }
 
 .people {
-    padding: 100px 0;
-    display:flex;
+    padding: 50px 0;
+    display:block;
+    @include breakpoint("small-dp") {
+        display:flex;
+        padding: 100px 0;
+    }
     &__description {
-        width:55%;
+        width:100%;
         text-align:left;
+        @include breakpoint("small-dp") {
+            width:50%;
+        }
     }
     &__text {
         margin-top:20px;
         width:90%;
     }
     &__profiles {
-        width:60%;
+        width:100%;
         position:relative;
+        height:200px;
+        margin-top:100px;
+        @include breakpoint("small-dp") {
+            margin-top:0px;
+            width:40%;
+        }
             .img-profile {
-                width:90px;
+                position:absolute;
+                width:100%;
             }
         .support {
-            left:380px;
-            top:-20px;
+            right:-5%;
+            top:-20%;
+            width:25%;
             div {
                 border:1px solid #000;
                 background-color: map-get($background, bc-black-grey);
@@ -83,50 +99,9 @@
                 }    
             }
         }
-        .profile1 {
-            top:70px;
-            left:0;
-        }
-        .profile2 {
-            left:180px;
-        }
-        .profile3 {
-            left:250px;
-            top:-120px;
-        }
-        .profile4 {
-            left:280px;
-            bottom:-80px;
-        }
-        .profile5 {
-            left:500px;
-            top:-100px;
-        }
-        .profile6 {
-            left:480px;
-            bottom:-100px;
-        }
-        .curved-line {
-            top:-100px;
-            left:50px;
-            z-index:-1;
-        }
-        .curved-line2 {
-            top:-100px;
-            left:300px;
-            z-index:-1;
-            img {
-                width:80%;
-            }
-        }
-        .curved-line3 {
-            left:450px;
-            top:20px;
-            z-index:-1;
-        }
     }
-    &__profile-picture {
-        position:absolute;
+    &__picture-group {
+        width:100%;
     }
 }
 
@@ -148,7 +123,10 @@
         z-index:1;
         img {
             cursor:pointer;
-            width: 70px;
+            width:30px;
+            @include breakpoint("tablet") {
+                width: 70px;
+            }
         }
     }
     &__play {
@@ -160,7 +138,7 @@
         position:absolute;
         img {
             cursor:pointer;
-            width:120px;
+            width:10%;
         }
     }
     &__buttons {
@@ -170,6 +148,7 @@
         display:flex;
         align-items: center;
         justify-content: center;
+        
     }     
     &__bar {
         width:80%;
@@ -190,8 +169,12 @@
 }
 
 .heading {
-    font-size:map-get($f-size, heading );
+    font-size:map-get($f-size, mobile-title );
     font-family:map-get($fonts, font-small-title );
     display:block;
-    width:50%;
+    
+    @include breakpoint("small-dp") {
+        font-size:map-get($f-size, heading );
+        width:50%;
+    }
 }

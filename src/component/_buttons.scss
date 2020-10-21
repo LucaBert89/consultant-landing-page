@@ -1,8 +1,12 @@
 .btn {
-    padding:15px 50px;
+    padding:15px 30px;
     border-radius:10px;
-    width:220px;
+    width:130px;
     font-family: map-get($fonts, font-text );
+    @include breakpoint("small-dp") {
+        width:220px;
+        padding:15px 50px;
+    }
     cursor:pointer;
         &--red {
             background-color:map-get($background, bc-red-ribbon );
@@ -18,9 +22,12 @@
         }
         span {
             color: map-get($colors, c-white );
-            font-size: map-get($f-size, regular );
             display:block;
             width:100%;
+            font-size: map-get($f-size, f-xsmall );
+            @include breakpoint("small-dp") {
+                font-size: map-get($f-size, regular );
+            }
         }
        
 }
@@ -31,7 +38,10 @@
     justify-content: center;
     .btn {
         padding:25px 100px;
-        width:500px;
+        width:300px;
         border:1px solid map-get($background, bc-bluebell );
+        @include breakpoint("tablet") {
+            width:500px;
+        }
     }
 }
