@@ -5,20 +5,23 @@ import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
 
 
-let question = document.querySelectorAll(".faq__question");
-let loadBtn = document.querySelector(".btn-load");
-let slideBtn = document.querySelector(".best-feature__arrow");
-let slides = document.querySelectorAll(".best-feature__opinion");
+const question = document.querySelectorAll(".faq__question");
+const loadBtn = document.querySelector(".btn-load");
+const slideBtn = document.querySelector(".best-feature__arrow");
+const slides = document.querySelectorAll(".best-feature__opinion");
 let currentSlide = 0;
 
 
+(function init () {
+    for(let i=0; i< question.length; i++) {
+        question[i].addEventListener("click", accordion);
+        loadBtn.addEventListener("click", addQuestions);
+        slideBtn.addEventListener("click", changeSlide);
+    }
+})();
 
-for(let i=0; i< question.length; i++) {
-    question[i].addEventListener("click", accordion);
-    loadBtn.addEventListener("click", addQuestions);
-    slideBtn.addEventListener("click", changeSlide);
-}
 
+// accordion in FAQ SECTION
 function accordion (event) {
     const answer = event.currentTarget.nextElementSibling;
     const arrowBtn = this.children[1];
@@ -31,16 +34,17 @@ function accordion (event) {
         }
     }  
 
+// ADD NEW QUESTION AFTER LOAD BTN IS PRESSED
 function addQuestions() {
     let control = false;
-    let questionList = document.querySelectorAll(".faq__questions-list")[1];
-    let questions = [
+    const questionList = document.querySelectorAll(".faq__questions-list")[1];
+    const questions = [
         "How do I apply for a traffic Permit?", 
         "When will I receive my permit?",
         "How much does a permit cost?",
         "What do I need in the event of a Lost/Stolen permit?"
     ];
-    let answers = [
+    const answers = [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor vulputate volutpat. Fusce eros quam, faucibus vitae velit at, pharetra ultricies metus.",
         "Most Traffic permits require a minimum of four business days to process.",
         "The cost of the Public Space permit varies, depending on the scope of work",
@@ -73,11 +77,12 @@ function addQuestions() {
     } else {
         return;
     }
-
     control = true; 
 };
     
+// CHANGE SLIDE AFTER CLICK ON ARROW BTN
 function changeSlide() {
+   
     let lastSlide = slides.length -1;
     let nextSlide = currentSlide + 1;
         if(slides[currentSlide].className == "best-feature__opinion active") {
@@ -99,8 +104,8 @@ function slider(current, next) {
     slides[next].classList.add("active");
 }
 
-// validation form
-function validation() {
+// validation form and errors
+(function validation() {
     
     const signBtn = document.querySelector(".signIn");
     const inputName = document.querySelector(".join-us__name");
@@ -139,6 +144,4 @@ function validation() {
         errorName.innerText ="";
         errorPass.innerText = "";
     }
-}
-
-validation();
+})();
