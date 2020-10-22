@@ -60,9 +60,9 @@
     }
     &__icons {
         display:flex;
-        justify-content: flex-end;
         @include breakpoint("tablet") {
             width:60%;
+            justify-content: flex-end;
         }
     }
     &__face {
@@ -82,7 +82,7 @@
         height:36px;
         margin: 0 10px;
         cursor:pointer;
-        @include breakpoint("tablet") {
+        @include breakpoint("desktop") {
             width:36px;
         }
     }

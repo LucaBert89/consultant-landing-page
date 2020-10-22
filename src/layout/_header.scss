@@ -15,18 +15,22 @@ header {
 }
 
 .menu {
-    justify-content: space-between;
     height:116px;
-    @include breakpoint("small-dp") {
+    @include breakpoint("desktop") {
         @include flex-center-vert;
+        justify-content: space-between;
     }
         &__logo {
             @include flex-center-vert;
+            padding-top:20px;
+            @include breakpoint("tablet") {
+                padding-top:0px;
+            }
             span {
                 font-family: map-get($fonts, font-logo-text );
                 color: map-get($colors, c-emperor );
                 font-size:map-get($f-size, f-small );
-                @include breakpoint("small-dp") {
+                @include breakpoint("desktop") {
                     font-size:map-get($f-size, logo );
                 }
             }
