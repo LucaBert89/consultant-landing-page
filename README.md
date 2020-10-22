@@ -18,4 +18,4 @@ I used **toggle** and **trello** to time and organize the different steps of bui
 - webpack
 
 ###### Deploy link:
-dreammaker-consultant.netlify.app
+https://dreammaker-consultant.netlify.app/
