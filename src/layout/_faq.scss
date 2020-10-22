@@ -67,14 +67,20 @@
         }
     }
     &__question {
-        display:flex;
-        justify-content: space-around;
         background-color:#fff;
         padding:30px 0;
         box-shadow: 0px 5px 10px #E0E0E0;
         border-radius:23px;
         span {
+            display:inline-block;
+            margin-right:0px;
             width:80%;
+            @include breakpoint("tablet") {
+                margin-right:50px;
+             }
+        }
+        .arrow-btn {
+            display:inline-block;
         }
     }
     &__answer {

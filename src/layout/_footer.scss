@@ -6,7 +6,7 @@
     &__info {
         display:block;
         justify-content: space-around;
-        padding:80px 100px 0px 100px;
+        padding:30px 100px 0px 40px;
         @include breakpoint("small-dp") {
             display:flex;
             padding:130px 100px 0px 100px;
@@ -23,10 +23,12 @@
         }
     }
     &__element {
-        
-        font-size: map-get($f-size, f-small );
+        font-size: map-get($f-size, f-xsmall );
         line-height: 24px;
         color:map-get($colors, c-mercury );
+        @include breakpoint("small-dp") {
+            font-size: map-get($f-size, f-small );
+        }
     }
     &__list-title {
         color:map-get($colors, c-white );
@@ -34,12 +36,13 @@
         line-height: 30px;
     }
     &__legal {
-        margin-top:77px;
+        margin-top:0px;
         padding-bottom:20px;
         display:block;
         @include breakpoint("tablet") {
             display:flex;
             align-items: center;
+            margin-top:77px;
         }
     }
     &__copyright {
