@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode:"production",
+    devtool: "inline-source-map",
     plugins: [
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "src", "index.html")
@@ -11,6 +12,7 @@ module.exports = {
       new MiniCssExtractPlugin({
           filename: "style.css"
         }),
+      
     ],
     module: {
         rules: [
@@ -23,6 +25,7 @@ module.exports = {
               ],
           },
           { 
+            // fonts loader
             test: /\.(woff|woff2|eot|ttf)$/,
             exclude: /node_modules/,
             loader: 'file-loader',
@@ -31,6 +34,7 @@ module.exports = {
               outputPath: 'fonts/'
             } 
           },
+          // images loader
           { test: /\.(png|svg|jpg|gif)$/,
             use: [
             {
@@ -45,6 +49,7 @@ module.exports = {
             ]
           },
           {
+            // WEBP images loader
             test: /\.(jpe?g|png|webp)$/i,
             use: [
               {
@@ -65,6 +70,7 @@ module.exports = {
             ],
           },
           {
+            // html plugin loader
             test: /\.html$/i,
             loader: 'html-loader',
             options: {
