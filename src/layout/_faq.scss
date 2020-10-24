@@ -75,7 +75,9 @@
             display:inline-block;
             margin-right:0px;
             width:80%;
+            font-size:map-get($f-size, f-xsmall );
             @include breakpoint("tablet") {
+                font-size:map-get($f-size, regular );
                 margin-right:50px;
              }
         }
@@ -90,6 +92,14 @@
         display: none;
         overflow: hidden;
         border-radius:10px;
+        div {
+            font-size:map-get($f-size, f-xsmall );
+            @include breakpoint("tablet") {
+                font-size:map-get($f-size, regular );
+             }
+        }
+        
+            
     }
 }
 
