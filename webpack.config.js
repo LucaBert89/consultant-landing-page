@@ -10,7 +10,7 @@ module.exports = {
       }),
       new MiniCssExtractPlugin({
           filename: "style.css"
-        })
+        }),
     ],
     module: {
         rules: [
@@ -39,10 +39,30 @@ module.exports = {
                 esModule: false,
                 name: "[name].[ext]",
                 outputPath: "images/",
-                publicPath: "images/"
+                publicPath: "images/",
               } 
             }
             ]
+          },
+          {
+            test: /\.(jpe?g|png|webp)$/i,
+            use: [
+              {
+                loader: 'file-loader',
+                options: {
+                  esModule: false,
+                  name: "[name].[ext]",
+                  outputPath: "images/",
+                  publicPath: "images/",
+                }
+              },
+              {
+                loader: 'webp-loader',
+                options: {
+                  esModule: false,
+                }
+              },
+            ],
           },
           {
             test: /\.html$/i,

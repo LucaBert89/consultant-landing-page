@@ -75,7 +75,7 @@
     }
     &__image {
         position:absolute;
-        background-image: url("./images/feature/bigGirl.png");
+        background-image: url("./images/feature/bigGirl.webp");
         background-repeat: no-repeat;
         background-size: 100%;
         width:650px;
@@ -184,12 +184,12 @@
     }
     .profile2 {
         &::before {
-            background-image: url("./images/feature/girlPic.jpg");
+            background-image: url("./images/feature/girlPic.webp");
         }
     }
     .profile3{
         &::before {
-            background-image: url("./images/feature/menPic.jpg");
+            background-image: url("./images/feature/manPic.webp");
         }
     }
     &__name {
