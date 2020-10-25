@@ -20,7 +20,6 @@
         form {
             font-family: map-get($fonts, font-text );
             color: map-get($colors, c-silverchalice );
-            padding-top:100px;
             @include flex-center-vert;
             flex-direction: column;
             padding:30px 50px;
@@ -34,16 +33,22 @@
             }
             label {
                 display:block;
-                font-size: map-get($f-size, f-small );
+                font-size: map-get($f-size, f-xsmall );
+                @include breakpoint("tablet") {
+                    font-size: map-get($f-size, regular );
+                }
                 input {
+                    font-size: map-get($f-size, f-xsmall );
                     display:block;
                     margin:10px 0px 30px 0px;
                     border:2px solid map-get($colors, c-bluebell );
                     border-radius:10px;
                     padding:10px;
                     box-shadow: 0px 20px 40px rgba(149, 149, 201, 0.2);
+                    padding:10px 40px 10px 20px;
                     @include breakpoint("tablet") {
                         padding:10px 80px 10px 20px;
+                        font-size: map-get($f-size, regular );
                     }
                     &::placeholder {
                         color: map-get($colors, c-silverchalice );

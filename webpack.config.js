@@ -50,7 +50,7 @@ module.exports = {
           },
           {
             // WEBP images loader
-            test: /\.(jpe?g|png|webp)$/i,
+            test: /\.(webp)$/i,
             use: [
               {
                 loader: 'file-loader',

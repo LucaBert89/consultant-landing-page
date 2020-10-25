@@ -48,7 +48,7 @@
         }
     }
     &__image {
-        margin:60px 0;
+        margin:60px 40px;
         img {
             width:100%;
         }
@@ -75,14 +75,24 @@
     }
     &__image {
         position:absolute;
-        background-image: url("./images/feature/bigGirl.webp");
+        background-image: url("./images/feature/bigGirl.svg");
         background-repeat: no-repeat;
         background-size: 100%;
         width:650px;
         height:800px;   
         top:0;
-        left:-170px;
+        left:-100px;
         display:none;
+        &::after {
+            content:"";
+            opacity:0.5;
+            top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;  
+        }
         @include breakpoint("desktop") {
             display:block;
         }

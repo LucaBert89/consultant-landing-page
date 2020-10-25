@@ -76,7 +76,7 @@ header {
                 font-size: 13px;
                 @include breakpoint("small-dp") {
                     font-size: 18px;
-                    padding:0 2em;
+                    padding-right:30px;
                 }
             }
         }
