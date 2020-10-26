@@ -83,6 +83,9 @@
         }
         .arrow-btn {
             display:inline-block;
+            svg {
+                width:10px;
+            }
         }
     }
     &__answer {

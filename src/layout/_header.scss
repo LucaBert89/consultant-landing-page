@@ -72,9 +72,10 @@ header {
                 margin-bottom:0px;
             }
             & li {
-                padding:0 0.7em;
+                padding:0 1em;
                 font-size: 13px;
                 @include breakpoint("small-dp") {
+                    padding:0 2em;
                     font-size: 18px;
                     padding-right:30px;
                 }
