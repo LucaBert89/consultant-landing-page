@@ -63,6 +63,7 @@
     &__description {
         width:100%;
         text-align:left;
+        
         @include breakpoint("small-dp") {
             width:50%;
         }
@@ -70,6 +71,10 @@
     &__text {
         margin-top:20px;
         width:90%;
+        font-size: map-get($f-size, f-small );
+        @include breakpoint("small-dp") {
+            font-size: map-get($f-size, regular );
+        }
     }
     &__profiles {
         width:100%;
