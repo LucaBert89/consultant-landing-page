@@ -118,61 +118,10 @@
         margin-bottom:50px;
     }
     &__video {
-        background-image: url("./images/videopicture/video.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding-bottom:45%;   
-        position:relative;
-    }
-    &__audio {
-        position:absolute;
-        right:20px;
-        top:20px;
-        z-index:1;
-        img {
-            cursor:pointer;
-            width:30px;
-            @include breakpoint("tablet") {
-                width: 70px;
-            }
+        video {
+            width:100%;
+            height:600px;
         }
-    }
-    &__play {
-        height:100%;
-        width:100%;
-        display:flex;
-        justify-content: center;
-        align-items:center;
-        position:absolute;
-        img {
-            cursor:pointer;
-            width:10%;
-        }
-    }
-    &__buttons {
-        position:absolute;
-        width:100%;
-        bottom:20px;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        
-    }     
-    &__bar {
-        width:80%;
-        height:2px;
-        background-color:#fff;
-        border-radius:2px;
-        margin:0 20px;
-    }
-    &__progress {
-        height:2px;
-        width:60%;
-        background-color:map-get($background, bc-red );
-    }
-    .command {
-        color:#fff;
-        cursor:pointer;
     }
 }
 

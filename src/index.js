@@ -3,7 +3,7 @@ import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
-
+import mp4 from "./images/video-demo.mp4"
 
 const question = document.querySelectorAll(".faq__question");
 const loadBtn = document.querySelector(".btn-load");

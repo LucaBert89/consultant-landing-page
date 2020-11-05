@@ -34,8 +34,10 @@ module.exports = {
               outputPath: 'fonts/'
             } 
           },
+
+          // video
           // images loader
-          { test: /\.(png|svg|jpg|gif)$/,
+          { test: /\.(png|svg|jpg|gif|webm|mp4)$/,
             use: [
             {
               loader: 'file-loader',
