@@ -36,7 +36,6 @@ function accordion (event) {
 
 // ADD NEW QUESTION AFTER LOAD BTN IS PRESSED
 function addQuestions() {
-    let control = false;
     const questionList = document.querySelectorAll(".faq__questions-list")[1];
     const questions = [
         "How do I apply for a traffic Permit?", 
@@ -49,7 +48,6 @@ function addQuestions() {
         "Most Traffic permits require a minimum of four business days to process.",
         "The cost of the Public Space permit varies, depending on the scope of work",
         "You need to complete and sign a Statutory Declaration"];
-    if(!control) {
         for (var i=0; i<4; i++) {
             let container = document.createElement("div");
             container.className = "faq__question-container";
@@ -74,10 +72,6 @@ function addQuestions() {
             questionList.appendChild(container);
             newQuest.addEventListener("click", accordion); 
         }
-    } else {
-        return;
-    }
-    control = true; 
 };
     
 // CHANGE SLIDE AFTER CLICK ON ARROW BTN
