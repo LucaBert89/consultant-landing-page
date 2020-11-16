@@ -1,12 +1,15 @@
 .faq {
     margin-top:150px;
     &__columns {
+        position:relative;
         display:block;
         @include breakpoint("tablet") {
             display:flex;
         }
     }
     &__title {
+        display:inline-block;
+        width:40%;
         margin-bottom:50px;
         .heading {
             width:100%;
@@ -21,24 +24,27 @@
         margin-bottom:10px;
     }
     .first-row {
-        margin-bottom: 100px;
+        margin-bottom: 400px;
         box-shadow: 0px 25px 59px rgba(191, 191, 236, 0.72);
+        @include breakpoint("tablet") {
+            margin-bottom: 100px;
+        }
     }
     &__left-column {
         width:100%;
         @include breakpoint("tablet") {
-            display:flex;
-            flex-direction:column;
             justify-content: center;
             width:50%;
         }
     }
     &__right-column {
+        position:static;
         width:100%;
         @include breakpoint("tablet") {
             display:flex;
             flex-direction: column;
             width:50%;
+            position:relative;
         }
         div {
             .faq__image-person {
@@ -46,11 +52,20 @@
             }
         }
         .faq__questions-list {
+            margin-top:20px;
             transform: translate(0px, -100px);
+            @include breakpoint("tablet") {
+                margin-top:400px;
+            }
         }
     }
     &__image {
-        position:relative;
+        position:absolute;
+        top:170px;
+        @include breakpoint("tablet") {
+            margin-top: -300px;
+            top:0;
+        }
     }
     &__background {
         background-image: url("./images/FAQ/backgroundCircle.svg");
