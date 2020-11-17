@@ -9,8 +9,11 @@
     }
     &__title {
         display:inline-block;
-        width:40%;
+        width:100%;
         margin-bottom:50px;
+        @include breakpoint("tablet") {
+            width:40%;
+        }
         .heading {
             width:100%;
         }
@@ -62,10 +65,15 @@
     &__image {
         position:absolute;
         top:170px;
+        z-index:-1;
         @include breakpoint("tablet") {
             margin-top: -300px;
-            top:0;
+            top:140px;
         }
+        @include breakpoint("small-dp") { 
+            top:0px;
+        }
+       
     }
     &__background {
         background-image: url("./images/FAQ/backgroundCircle.svg");
