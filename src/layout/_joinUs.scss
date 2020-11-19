@@ -86,5 +86,8 @@
 .error {
     padding-bottom:20px;
     color:map-get($colors, c-red );
-    font-size: map-get($f-size, f-small );
+    font-size: 9px;
+    @include breakpoint("tablet") {
+        font-size: map-get($f-size, f-small );
+    }
 }
