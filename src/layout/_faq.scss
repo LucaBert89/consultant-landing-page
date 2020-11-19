@@ -55,10 +55,10 @@
             }
         }
         .faq__questions-list {
-            margin-top:20px;
+            margin-top:100px;
             transform: translate(0px, -100px);
             @include breakpoint("tablet") {
-                margin-top:400px;
+                margin-top:0px;
             }
         }
     }
@@ -67,13 +67,10 @@
         top:170px;
         z-index:-1;
         @include breakpoint("tablet") {
-            margin-top: -300px;
-            top:140px;
+            position:relative;
+            margin-top:-300px;
+            top:0;
         }
-        @include breakpoint("small-dp") { 
-            top:0px;
-        }
-       
     }
     &__background {
         background-image: url("./images/FAQ/backgroundCircle.svg");
